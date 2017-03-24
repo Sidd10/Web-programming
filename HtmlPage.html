@@ -1,20 +1,53 @@
-﻿<!doctype html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <script src="JavaScript.js"></script>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+    
+        function myFunction()
+        {
+            document.getElementById('btnAttendence').value = "Display Attendence";
+            var needle = document.getElementById("txtStudent").value;
+            var obj =
+        [
+           {
+               "FirstName": "Siddharth",
+               "lecture_Attendence_needed": "80%",
+               "Current_lecture_Attendence": "85%",
+               "lab_Attendence_needed": "80%",
+               "Current_lab_Attendence": "81%"
+           },
+		{
+		    "FirstName": "aaaa",
+		    "lecture_Attendence_needed": "80%",
+		    "Current_lecture_Attendence": "85%",
+            "lab_Attendence_needed": "80%",
+            "Current_lab_Attendence": "50%"
+		},
+        ];
+            for (var i = 0; i < obj.length; i++)
+            {
+                if (obj[i].FirstName == needle && obj[i].Current_lecture_Attendence>=80 && obj[i].Current_lab_Attendence>=80)
+                    {
+                        document.getElementById('contact-number').innerHTML = obj[i].Current_lecture_Attendence + "<br>" + obj[i].Current_lab_Attendence;
+                    }
+                else
+                    {
+                        alert("Short Attendence");
+                        document.getElementById('contact-number').innerHTML = obj[i].Current_lecture_Attendence + "<br>" + obj[i].Current_lab_Attendence;   
+                    }
+            }
+        }
+    </script>
 </head>
 <body>
-    <h1 id="title">Lecture 53</h1>
-
-    <p>
-        Say hello to
-        <input id="name" type="text">
-        <button onclick="sayHello();">
-            Say it!
-        </button>
-        <label id="label"></label>
-    </p>
-    <div id="content"></div>
+    <input id="txtStudent" type="text" /><br />
+    <input id="btnAttendence" type="button" value="Display Attendence" onclick="myFunction()" />
+    <div class="add-info">
+        <span class="rightfloat">
+        <span id="contact-number"></span>
+        </span>
+    </div>
 </body>
 </html>
