@@ -1,0 +1,18 @@
+[
+	{
+		"sap-id":7001,
+		"name":"Name1",
+		"Email":"AA@gmail.com",
+		"Contact_No":"8787878787",
+		"Date Of Birth":1-1-2017,
+		"cgpa":3.0	
+	},
+	{
+		"sap-id":7002,
+		"name":"Name2",
+		"Email":"BB@gmail.com",
+		"Contact_No":"7878787878",
+		"Date Of Birth":1-1-2018,
+		"cgpa":3.5	
+	}
+]
